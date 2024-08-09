@@ -1,0 +1,15 @@
+[Unit]
+Description="Spine Podping Watcher"
+
+[Service]
+ExecStart=/home/ubuntu/.nvm/versions/node/v18.19.0/bin/yarn start
+WorkingDirectory=/home/ubuntu/FA_Backend
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=PodpingWatcher
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,25 @@
+# baseURL
+@baseURL = http://localhost:3001
+
+###
+# User Signup
+POST {{ baseURL }}/signup
+Content-Type: application/json
+
+{
+    "email": "example@email.com",
+}
+
+###
+# User Login
+POST {{ baseURL }}/login
+Content-Type: application/json
+
+{
+    "email": "example@email.com",
+}
+
+###
+# User Logout
+POST {{ baseURL }}/logout
+Content-Type: application/json
